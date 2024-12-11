@@ -603,7 +603,7 @@ function drawGraph(percentages, targetIndex) {
                 const b = data[i + 2];
 
                 // Remove black pixels (#000000)
-                if (r === 0 && g === 0 && b === 0) {
+                if (r <= 1 && g <= 1 && b <= 1) {
                     data[i + 3] = 0; // Set alpha to 0 (transparent)
                 } else {
                     nonBlackPixelCount++; // Count non-black pixels
